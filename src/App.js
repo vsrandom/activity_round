@@ -5,6 +5,7 @@ import Plan from './components/Plan/Plan'
 import Order from './components/Order/Order'
 import Modal from './components/Modal/Modal'
 import Aux from './components/Aux/Aux'
+import logo from './assets/GitHub-Mark.png'
 
 class App extends React.Component{
 
@@ -16,7 +17,7 @@ class App extends React.Component{
                 leads : 20,
                 per_qualified_lead : 69,
                 platform_fee : 299,
-                package_price : 1679,
+                package_price : '1,679',
                 value : "Start Your Trial"
             },
             
@@ -24,7 +25,7 @@ class App extends React.Component{
               leads : 40,
               per_qualified_lead : 67,
               platform_fee : 599,
-              package_price : 3279,
+              package_price : '3,279',
               value : "Start Your Trial"
             },
 
@@ -32,7 +33,7 @@ class App extends React.Component{
               leads : 60,
               per_qualified_lead : 65,
               platform_fee : 699,
-              package_price : 4599,
+              package_price : '4,599',
               value : "Start Your Trial"
             },
 
@@ -40,7 +41,7 @@ class App extends React.Component{
               leads : 80,
               per_qualified_lead : 63,
               platform_fee : 799,
-              package_price : 5839,
+              package_price : '5,839',
               value : "Start Your Trial"
             },
 
@@ -58,7 +59,7 @@ class App extends React.Component{
               leads : 20,
               per_qualified_lead : 79,
               platform_fee : 299,
-              package_price : 1879,
+              package_price : '1,879',
               value : "Start Your Trial"
           },
           
@@ -66,7 +67,7 @@ class App extends React.Component{
             leads : 40,
             per_qualified_lead : 77,
             platform_fee : 599,
-            package_price : 3679,
+            package_price : '3,679',
             value : "Start Your Trial"
           },
 
@@ -74,7 +75,7 @@ class App extends React.Component{
             leads : 60,
             per_qualified_lead : 74,
             platform_fee : 699,
-            package_price : 5139,
+            package_price : '5,139',
             value : "Start Your Trial"
           },
 
@@ -82,7 +83,7 @@ class App extends React.Component{
             leads : 80,
             per_qualified_lead : 72,
             platform_fee : 799,
-            package_price : 6559,
+            package_price : '6,559',
             value : "Start Your Trial"
           },
           enterprise : {
@@ -99,7 +100,7 @@ class App extends React.Component{
             leads : 20,
             per_qualified_lead : 99,
             platform_fee : 299,
-            package_price : 2279,
+            package_price : '2,279',
             value : "Start Your Trial"
         },
         
@@ -107,7 +108,7 @@ class App extends React.Component{
           leads : 40,
           per_qualified_lead : 96,
           platform_fee : 599,
-          package_price : 4439,
+          package_price : '4,439',
           value : "Start Your Trial"
         },
 
@@ -115,7 +116,7 @@ class App extends React.Component{
           leads : 60,
           per_qualified_lead : 93,
           platform_fee : 699,
-          package_price : 6279,
+          package_price : '6,279',
           value : "Start Your Trial"
         },
 
@@ -123,7 +124,7 @@ class App extends React.Component{
           leads : 80,
           per_qualified_lead : 90,
           platform_fee : 799,
-          package_price : 7999,
+          package_price : '7,999',
           value : "Start Your Trial"
         },
         enterprise : {
@@ -140,7 +141,7 @@ class App extends React.Component{
               leads : 20,
               per_qualified_lead : 109,
               platform_fee : 299,
-              package_price : 2479,
+              package_price : '2,479',
               value : "Start Your Trial"
           },
           
@@ -148,7 +149,7 @@ class App extends React.Component{
             leads : 40,
             per_qualified_lead : 106,
             platform_fee : 599,
-            package_price : 4839,
+            package_price : '4,839',
             value : "Start Your Trial"
           },
 
@@ -156,7 +157,7 @@ class App extends React.Component{
             leads : 60,
             per_qualified_lead : 102,
             platform_fee : 699,
-            package_price : 6819,
+            package_price : '6,819',
             value : "Start Your Trial"
           },
 
@@ -164,7 +165,7 @@ class App extends React.Component{
             leads : 80,
             per_qualified_lead : 99,
             platform_fee : 799,
-            package_price : 8719,
+            package_price : '8,719',
             value : "Start Your Trial"
           },
           enterprise : {
@@ -181,7 +182,7 @@ class App extends React.Component{
               leads : 20,
               per_qualified_lead : 129,
               platform_fee : 299,
-              package_price : 2879,
+              package_price : '2,879',
               value : "Start Your Trial"
           },
           
@@ -189,7 +190,7 @@ class App extends React.Component{
             leads : 40,
             per_qualified_lead : 125,
             platform_fee : 599,
-            package_price : 5599,
+            package_price : '5,599',
             value : "Start Your Trial"
           },
 
@@ -197,7 +198,7 @@ class App extends React.Component{
             leads : 60,
             per_qualified_lead : 121,
             platform_fee : 699,
-            package_price : 7959,
+            package_price : '7,959',
             value : "Start Your Trial"
           },
 
@@ -205,7 +206,7 @@ class App extends React.Component{
             leads : 80,
             per_qualified_lead : 117,
             platform_fee : 799,
-            package_price : 10159,
+            package_price : '10,159',
             value : "Start Your Trial"
           },
 
@@ -242,7 +243,7 @@ class App extends React.Component{
   render(){
 
     let housePrices = this.state.housePrices.map(val=>{
-      let c = [classes.homeValueContainerContent]
+      let c = [classes.homeValueItem]
       if(val == this.state.selectedPlan) c.push(classes.highLightedHome)
       return <div onClick = {()=>this.selectedHomePlan(val)} key = {val} className = {c.join(" ")}><HousePrice value = {val}/></div>
     })
@@ -262,7 +263,11 @@ class App extends React.Component{
         </Modal>
         </div>      
         <div className = {classes.container}>
-          <div className = {classes.header}></div>
+          <div className = {classes.header}>
+            <div className ={classes.github}>
+                <a href = "https://www.github.com/vsrandom" ><img src = {logo}/> </a>
+            </div>
+          </div>
 
           <div className = {classes.homeValueContainer}>
               {housePrices}
@@ -272,7 +277,7 @@ class App extends React.Component{
             {selectedPlanList}
           </div>
 
-          <div className = {classes.footer}></div>
+          <div className = {classes.footer}>Author : Vivek Sharma</div>
         </div>
       </Aux>
     )

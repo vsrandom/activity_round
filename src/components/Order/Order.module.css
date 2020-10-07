@@ -1,6 +1,6 @@
 .container {
     display : grid;
-    grid-gap : 10px;
+    grid-gap : 15px;
     padding : 10px;
 }
 
@@ -15,13 +15,13 @@
 .emPhone{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .leads{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .crmAgents{
@@ -43,4 +43,16 @@
     color : white;
     height: 2rem;
     width: 4rem;
+    border-radius: 5px;
+}
+
+.inputs{
+    width : 100%;
+    height : 1.5rem;
+}
+
+.text{
+    color : #5353e2;
+    font-weight: bold;
+    margin : 3px;
 }

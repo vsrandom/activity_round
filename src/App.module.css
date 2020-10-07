@@ -10,6 +10,9 @@
 
 .footer{
     background : black;
+    color : white;
+    text-align: center;
+    padding : 8px;
 }
 
 .homeValueContainer{
@@ -18,18 +21,23 @@
     align-items: center;
 }
 
-.homeValueContainerContent{
+.homeValueItem{
     display : flex;
     align-items: center;
     justify-content: center;
     border : 1px solid black;
-    height: 110px;
+    height: 50px;
     width: 110px;
     cursor : pointer;
+    border-radius : 8px;
+    font-weight: bold;
+    background: whitesmoke;
+    color : #5353e2;
+    width : 11%;
 }
 
 .highLightedHome{
-    background : red;
+    background : #5353e2;
     color : white;
 }
 
@@ -39,3 +47,20 @@
     justify-content: space-around;
     margin : 0 auto;
 }
+.github{
+    text-align: center;
+}
+
+.github a{
+    text-decoration  : none;
+    color : #d4d4dc;
+  }
+  
+  .github a:hover{
+    color : rgb(226, 43, 74);
+  }
+  
+  .github img{
+    height : 2rem;
+    margin : 10px;
+  }

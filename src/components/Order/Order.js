@@ -94,30 +94,30 @@ class Order extends React.Component{
         if(this.props.planLeads) selectedPlan = "Qualified " + this.props.planLeads
         return (
             <div className = {classes.container}>
-                <div style = {{'textAlign' :'center','color' : '#1400c6', 'font-weight': 'bold'}}>
+                <div style = {{'textAlign' :'center'}} className = {classes.text} >
                     Get Started With Squad Voice
                 </div>
                 <div className = {classes.planSelected}>
-                    <div style = {{'color' : '#1400c6'}}>Plan Selected : </div> 
+                    <div className = {classes.text}>Plan Selected : </div> 
                     <div style = {{'margin-left' : '15px'}}>{selectedPlan}</div>
                 </div>
                 <div>
-                    <div style = {{'color' : '#1400c6'}}>Name</div>
-                    <div><input style={{width: "100%"}} type = "text" value = {this.state.name} 
+                    <div className = {classes.text}>Name</div>
+                    <div><input className = {classes.inputs} type = "text" value = {this.state.name} 
                         onChange = {this.nameChangeHandler} />
                     </div>
                 </div>
                 <div className = {classes.emPhone}>
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>E-mail Address</div>
-                        <div><input style={{'width' : "100%"}} type = "text" value = {this.state.email} 
+                        <div className = {classes.text}>E-mail Address</div>
+                        <div><input className = {classes.inputs} type = "text" value = {this.state.email} 
                             onChange = {this.emailChangeHandler} />
                         </div>
                     </div>
 
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>Phone No.</div>
-                        <div><input style={{'width': "100%"}} type = "text" value = {this.state.phone} 
+                        <div className = {classes.text}>Phone No.</div>
+                        <div><input className = {classes.inputs} type = "text" value = {this.state.phone} 
                             onChange = {this.phoneChangeHandler} />
                         </div>
                     </div>
@@ -125,15 +125,15 @@ class Order extends React.Component{
 
                 <div className = {classes.leads}>
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>No of Leads you generate in a month</div>
-                        <div><input style={{width: "100%"}} type = "number" min="0" max="100" 
+                        <div className = {classes.text}>No of Leads you generate in a month</div>
+                        <div><input className = {classes.inputs} type = "number" min="0" max="100" 
                             onChange = {this.leadsChangeHandler} placeholder = "-"/>
                         </div>
                     </div>
 
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>Total Leads in your CRM</div>
-                        <div><input style={{width: "100%"}} placeholder = "-" type = "number" min="0" 
+                        <div className = {classes.text}>Total Leads in your CRM</div>
+                        <div><input className = {classes.inputs} placeholder = "-" type = "number" min="0" 
                         max="100" value = {this.state.totalLeads} 
                             onChange = {this.totalLeadsHandler} />
                         </div>
@@ -142,9 +142,9 @@ class Order extends React.Component{
 
                 <div className = {classes.crmAgents}>
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>Which CRM do you use ?</div>
+                        <div className = {classes.text}>Which CRM do you use ?</div>
                         <div>
-                            <select style={{width: "100%"}} value = {this.state.crmValue} onChange = {this.crmHandler} >
+                            <select className = {classes.inputs} value = {this.state.crmValue} onChange = {this.crmHandler} >
                                 <option>CRM-A</option>
                                 <option>CRM-B</option>
                                 <option>CRM-C</option>
@@ -153,15 +153,15 @@ class Order extends React.Component{
                     </div>
 
                     <div style={{width: "45%"}}>
-                        <div style = {{'color' : '#1400c6'}}>No of Agents </div>
-                        <div><input style={{width: "100%"}} placeholder = "-" type = "number" min="0" max="100" value = {this.state.noAgents} 
+                        <div className = {classes.text}>No of Agents </div>
+                        <div><input className = {classes.inputs} placeholder = "-" type = "number" min="0" max="100" value = {this.state.noAgents} 
                             onChange = {this.noAgentsChangeHandler} />
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <div style = {{'color' : '#1400c6'}}>
+                    <div className = {classes.text}>
                         What are your biggest lead Sources ?
                     </div>
                     <div className = {classes.sources}>
@@ -188,7 +188,7 @@ class Order extends React.Component{
                 </div>
 
                 <div>
-                    <div style = {{'color' : '#1400c6'}}>
+                    <div className = {classes.text}>
                         How did you hear about us ?
                     </div>
                     <div className = {classes.sources}>
