@@ -14,7 +14,7 @@ const plan = (props)=>{
                     Want more than 80 classified leads each month ?
                     </div>
                 </div>
-                <div className = {classes.start}>
+                <div onClick = {props.clicked} className = {classes.start}>
                     <div>{props.value}</div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ const plan = (props)=>{
                 <div className = {classes.package_price}>
                     <div> ${props.package_price}/mo </div>
                 </div>
-                <div className = {classes.start}>
+                <div onClick = {props.clicked} className = {classes.start}>
                     <div>{props.value}</div>
                 </div>
             </div>

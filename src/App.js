@@ -2,6 +2,9 @@ import React from 'react';
 import classes from "./App.module.css"
 import HousePrice from './components/HousePrice/HousePrice'
 import Plan from './components/Plan/Plan'
+import Order from './components/Order/Order'
+import Modal from './components/Modal/Modal'
+import Aux from './components/Aux/Aux'
 
 class App extends React.Component{
 
@@ -224,6 +227,16 @@ class App extends React.Component{
     this.setState({selectedPlan : el});
   }
 
+  showModalHandler = ()=>{
+    const showModal = this.state.showModal;
+    if(showModal == false)
+    this.setState({showModal : !showModal})
+  }
+
+  cancelModalHandler = ()=>{
+    this.setState({showModal:false});
+  }
+
   render(){
 
     let housePrices = this.state.housePrices.map(val=>{
@@ -233,27 +246,32 @@ class App extends React.Component{
     })
     let selectedPlan = this.state.plansData[this.state.selectedPlan]
     let selectedPlanList = Object.keys(selectedPlan).map(obj=>{
-      return <Plan key = {Math.random()} value = {selectedPlan[obj].value} leads = {selectedPlan[obj].leads}
+      return <Plan key = {Math.random()} clicked = {this.showModalHandler} value = {selectedPlan[obj].value} leads = {selectedPlan[obj].leads}
        per_qualified_lead = {selectedPlan[obj].per_qualified_lead}
        platform_fee = {selectedPlan[obj].platform_fee} package_price = {selectedPlan[obj].package_price} />
     })
 
     return (
-      <div className = {classes.container}>
-        <div className = {classes.header}>
+      <Aux>
+        <div>
+        <Modal show = {this.state.showModal} clicked = {this.cancelModalHandler}>
+                    <Order />                
+        </Modal>
+        </div>      
+        <div className = {classes.container}>
+          <div className = {classes.header}></div>
 
+          <div className = {classes.homeValueContainer}>
+              {housePrices}
+          </div>
+
+          <div className = {classes.planListContainer}>
+            {selectedPlanList}
+          </div>
+
+          <div className = {classes.footer}></div>
         </div>
-
-        <div className = {classes.homeValueContainer}>
-            {housePrices}
-        </div>
-
-        <div className = {classes.planListContainer}>
-          {selectedPlanList}
-        </div>
-
-        <div className = {classes.footer}></div>
-      </div>
+      </Aux>
     )
   }
 }
