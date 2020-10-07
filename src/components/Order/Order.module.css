@@ -1,0 +1,46 @@
+.container {
+    display : grid;
+    grid-gap : 10px;
+    padding : 10px;
+}
+
+.planSelected{
+    padding-top : 7px;
+    border-top : 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.emPhone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leads{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crmAgents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sources{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.submit{
+    background: red;
+    border : none;
+    cursor : pointer;
+    color : white;
+    height: 2rem;
+    width: 4rem;
+}

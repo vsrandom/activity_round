@@ -219,7 +219,8 @@ class App extends React.Component{
         }
       },
       showModal : false,
-      housePrices : ["plan_100_200", "plan_200_300", "plan_300_400", "plan_400_500", "plan_500"]
+      housePrices : ["plan_100_200", "plan_200_300", "plan_300_400", "plan_400_500", "plan_500"],
+      selectedPlanLeads : null 
   } 
 
   selectedHomePlan = (el)=>{
@@ -227,10 +228,11 @@ class App extends React.Component{
     this.setState({selectedPlan : el});
   }
 
-  showModalHandler = ()=>{
+  showModalHandler = (leads)=>{
     const showModal = this.state.showModal;
-    if(showModal == false)
-    this.setState({showModal : !showModal})
+    if(showModal == false){
+    this.setState({selectedPlanLeads: leads,showModal : !showModal})
+    }
   }
 
   cancelModalHandler = ()=>{
@@ -246,7 +248,8 @@ class App extends React.Component{
     })
     let selectedPlan = this.state.plansData[this.state.selectedPlan]
     let selectedPlanList = Object.keys(selectedPlan).map(obj=>{
-      return <Plan key = {Math.random()} clicked = {this.showModalHandler} value = {selectedPlan[obj].value} leads = {selectedPlan[obj].leads}
+      return <Plan key = {Math.random()} clicked = {()=>this.showModalHandler(selectedPlan[obj].leads)} 
+      value = {selectedPlan[obj].value} leads = {selectedPlan[obj].leads}
        per_qualified_lead = {selectedPlan[obj].per_qualified_lead}
        platform_fee = {selectedPlan[obj].platform_fee} package_price = {selectedPlan[obj].package_price} />
     })
@@ -255,7 +258,7 @@ class App extends React.Component{
       <Aux>
         <div>
         <Modal show = {this.state.showModal} clicked = {this.cancelModalHandler}>
-                    <Order />                
+                    <Order planLeads = {this.state.selectedPlanLeads} />                
         </Modal>
         </div>      
         <div className = {classes.container}>
