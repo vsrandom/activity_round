@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    grid-template-rows: 5vh 20vh 55vh 5vh;
+    grid-gap : 5vh;
+}
+
+.header{
+    background : red;
+}
+
+.footer{
+    background : black;
+}
+
+.homeValueContainer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeValueContainerContent{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    border : 1px solid black;
+    height: 110px;
+    width: 110px;
+    cursor : pointer;
+}
+
+.highLightedHome{
+    background : red;
+    color : white;
+}
+
+.planListContainer{
+    display: flex;
+    width : 70%;
+    justify-content: space-around;
+    margin : 0 auto;
+}
