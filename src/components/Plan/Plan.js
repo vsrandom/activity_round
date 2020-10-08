@@ -15,7 +15,7 @@ const plan = (props)=>{
                 </div>
                 <div className = {classes.message}>
                     <div>
-                    Want more than 80 classified leads each month ?
+                    Want more than 80 qualified leads each month ?
                     </div>
                 </div>
                 <div onClick = {props.clicked} className = {classes.start}>
