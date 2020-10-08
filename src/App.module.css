@@ -1,6 +1,6 @@
 .container{
     display: grid;
-    grid-template-rows: 5vh 20vh 55vh 5vh;
+    grid-template-rows: 5vh 20vh auto 5vh;
     grid-gap : 5vh;
 }
 
@@ -13,6 +13,9 @@
     color : white;
     text-align: center;
     padding : 8px;
+    position: fixed;
+    bottom: 0;
+    left : 0;
 }
 
 .homeValueContainer{
@@ -29,7 +32,7 @@
     height: 50px;
     width: 110px;
     cursor : pointer;
-    border-radius : 8px;
+    border-radius : 4px;
     font-weight: bold;
     background: whitesmoke;
     color : #5353e2;
@@ -47,6 +50,9 @@
     justify-content: space-around;
     margin : 0 auto;
 }
+
+
+
 .github{
     text-align: center;
 }
@@ -64,3 +70,21 @@
     height : 2rem;
     margin : 10px;
   }
+
+@media(max-width : 830px){
+    .homeValueContainer{
+        flex-direction: column;
+    }
+
+    .homeValueItem{
+        width: 80%;
+    }
+}
+
+@media(max-width : 830px){
+    .planListContainer{
+        flex-direction: column;
+        margin  : auto;
+        width : 80%;
+    }
+}

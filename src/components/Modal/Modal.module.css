@@ -2,14 +2,16 @@
     position: fixed;
     z-index: 500;
     background-color: white;
-    width: 70%;
+    width: 80%;
+    height : 620px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px black;
     padding: 16px;
-    left: 15%;
-    top: 10%;
+    left: 10%;
+    top : 10%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+    overflow-y: auto;
 }
 
 .show{
@@ -22,9 +24,22 @@
     opacity :  0;
 }
 
-@media (min-width: 600px) {
+.cross {
+    position : absolute;
+    right : 0;
+    top : 0;
+    color:black;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    cursor : pointer;
+  }
+
+  @media (min-width: 830px) {
     .Modal {
-        width: 500px;
+        width: 600px;
         left: calc(50% - 250px);
     }
 }

@@ -78,3 +78,11 @@
     align-items: center;
     font-weight: bold;
 }
+
+@media(max-width : 830px){
+    .container{
+        width : 100%;
+        margin-bottom: 35px;
+        margin-top : 35px;
+    }
+}

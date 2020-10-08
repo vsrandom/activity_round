@@ -13,6 +13,9 @@ class Modal extends Component{
             <Aux>
                 <Backdrop show = {this.props.show} clicked = {this.props.clicked}/>
                 <div className = {c.join(' ')} >
+                    <div onClick = {this.props.clicked} className = {classes.cross}>
+                        <span>X</span>
+                    </div>
                     {this.props.children}
                 </div>
             </Aux>
